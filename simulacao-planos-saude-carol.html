@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simule Seu Plano de Saúde</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0d6efd;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, select, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #084ec1;
+    }
+    .whatsapp-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Simule seu Plano de Saúde</h1>
+    <p>Atendimento humanizado, planos a partir de R$ 99, sem burocracia!<br>Peça sua cotação gratuita agora mesmo 👇</p>
+    <form action="https://formspree.io/f/xoqggrpg" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome completo" required />
+      <input type="number" name="idade" placeholder="Sua idade" required />
+      <input type="text" name="cidade" placeholder="Cidade e estado" required />
+      <select name="tipo_plano" required>
+        <option value="">Tipo de plano</option>
+        <option value="individual">Individual</option>
+        <option value="familiar">Familiar</option>
+        <option value="mei">MEI</option>
+        <option value="empresarial">Empresarial</option>
+      </select>
+      <input type="text" name="cnpj" placeholder="Possui CNPJ? (Sim ou Não)" required />
+      <input type="number" name="quantidade" placeholder="Quantas pessoas deseja incluir?" required />
+      <input type="tel" name="whatsapp" placeholder="Telefone com WhatsApp" required />
+      <button type="submit">Enviar Simulação</button>
+    </form>
+    <a class="whatsapp-link" href="https://wa.me/5547933803330" target="_blank">Ou clique aqui para falar direto no WhatsApp</a>
+  </div>
+</body>
+</html>
